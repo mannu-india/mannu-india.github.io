@@ -6,15 +6,15 @@
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
 <style>
 * {margin:0;padding:0;box-sizing:border-box;}
 
 body {
   font-family: 'Manrope', sans-serif;
-}
-
-.title {
-  font-family: 'Playfair Display', serif;
+  background: radial-gradient(circle at top, #0f2027, #050505);
+  color: #eaeaea;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
@@ -48,6 +48,16 @@ section {
   padding: 100px 10%;
 }
 
+h1 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.8;
+  color: #ccc;
+}
+
 /* HERO */
 #about {
   text-align: center;
@@ -62,16 +72,16 @@ section {
 }
 
 .subtitle {
-  margin-top: 15px;
+  margin-top: 10px;
   color: #aaa;
 }
 
-/* CARD STYLE */
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
   transition: 0.3s;
 }
 
@@ -87,10 +97,10 @@ section {
   gap: 20px;
 }
 
-/* WRITING SYSTEM */
+/* WRITING */
 .article-list div {
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid #333;
 }
 
@@ -100,10 +110,10 @@ section {
 
 .article-view {
   margin-top: 30px;
-  padding: 20px;
+  padding: 25px;
   background: #111;
-  border-radius: 10px;
-  line-height: 1.7;
+  border-radius: 12px;
+  line-height: 1.8;
 }
 </style>
 </head>
@@ -126,37 +136,36 @@ section {
   <p class="subtitle">Maths • Science • Writing • Thought</p>
 
   <div class="card">
-
     <p>
-   Hi! This is Akansha. I like to understand why things are true, why they are the way they are. 
+Hi! This is Akansha. I like to understand why things are true, why they are the way they are.
     </p>
 
     <br>
 
     <p>
- I like maths, it gives me structure. My life is guided by it. Science amazes me and writing helps me bring clarity. 
+I like maths, it gives me structure. My life is guided by it. Science amazes me and writing helps me bring clarity.
     </p>
 
     <br>
 
     <p>
-    I am still learning, still exploring, and trying to build a better version — one idea at a time. Thankyou for visiting. I hope you find it meaningful. 
+I am still learning, still exploring, and trying to build a better version — one idea at a time. Thank you for visiting. I hope you find it meaningful.
     </p>
-
   </div>
 </section>
 
 <!-- CV -->
 <section id="cv">
   <h1>My CV</h1>
-  <div class="card"> Healing right now. Will update it in future. Still searching and struggling. </div>
+  <div class="card">
+    Currently in a phase of learning and growth. This section will be updated soon.
+  </div>
 </section>
 
 <!-- MATHS -->
 <section id="maths">
   <h1>Maths Work</h1>
   <div class="grid">
-   
     <div class="card">Proof Writing</div>
     <div class="card">Notes on Mathematics</div>
   </div>
@@ -172,8 +181,8 @@ section {
 <!-- RESEARCH -->
 <section id="research">
   <h1>Research & Projects</h1>
-  <div class="card">Mother Earth, About Climate Change and it's effect.</div>
-  <div class="card">My Other Research, involes MATHS GRAPHS, DIFFERENT CHEMICALS, MONEY MAKING, BANKING WORKS, ECONOMICS CENSUS. AND MUCH MORE.</div>
+  <div class="card">Mother Earth, About Climate Change and its effect.</div>
+  <div class="card">My other research involves maths graphs, different chemicals, economics, and more.</div>
 </section>
 
 <!-- WRITING -->
@@ -181,13 +190,12 @@ section {
   <h1>My Writing Space</h1>
 
   <div class="article-list">
-    <div onclick="openArticle('a1')">The Beauty of Silence, and about my School friends, my school life and 10th Boards. </div>
+    <div onclick="openArticle('a1')">The Beauty of Silence</div>
     <div onclick="openArticle('a2')">How I fell in Love with Maths</div>
-    <div onclick="openArticle('a3')">My IOQM journey.</div>
-    <div onclick="openArticle('a4')">How dummy school feels like and experience of Board exams class 12</div>
-    <div onclick="openArticle('a5')">WHAT JEE Taught me, and How i see life at the age of 18</div>
-    <div onclick="openArticle('a6')">My Books, my life. How reading helped me.</div>
-  
+    <div onclick="openArticle('a3')">My IOQM journey</div>
+    <div onclick="openArticle('a4')">Dummy school & board exams (Class 12)</div>
+    <div onclick="openArticle('a5')">What JEE taught me</div>
+    <div onclick="openArticle('a6')">My Books, My Life</div>
   </div>
 
   <div id="article" class="article-view">
@@ -199,19 +207,17 @@ section {
 <section id="chess">
   <h1>Chess</h1>
   <div class="card">Chess puzzles</div>
-   <div class="card">Chess Games Review</div>
+  <div class="card">Chess games review</div>
 </section>
 
 <script>
-/* ARTICLE SYSTEM */
 const articles = {
-  a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers it makes us realise the importance of onessness.</p>",
-  a2: "<h2>Why I Love Mathematics</h2><p>Mathematics is not about numbers. It is about patterns, the most beautiful way to perceive reality.</p>"
-   a3: "<h2>My IOQM journey</h2><p>It was the day of september 17 when i was in 11 standard, i first encountered the ioqm paper. i first problem went like</p>",
-   a4: "<h2>How dummy school feels like and experience of Board exams class 12</h2><p>Class 12 boards exams not just marks the end of the important era and beginning of the new chapters, for me it was an enriching .</p>",
-   a5: "<h2>WHAT JEE Taught me, and How i see life at the age of 18</h2><p>Preparing for jee doesnt only feels like and exam prep it is so much more that that. thanks to my struggles and boundaries. i dont know why i am more creative on the paper than on my key board</p>",
-   a6: "<h2>My Books, my life. How reading helped me</h2><p>Books give my a lens, an easy way to give me new perspective. </p>",
-  
+  a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers, it makes us realise the importance of oneness.</p>",
+  a2: "<h2>How I fell in Love with Maths</h2><p>Mathematics is not about numbers. It is about patterns, the most beautiful way to perceive reality.</p>",
+  a3: "<h2>My IOQM journey</h2><p>It was the day of September 17 when I was in class 11 that I first encountered the IOQM paper. The first problem went like this...</p>",
+  a4: "<h2>Dummy school & board exams</h2><p>Class 12 board exams do not just mark the end of an era, but the beginning of something new. For me, it was an enriching experience.</p>",
+  a5: "<h2>What JEE taught me</h2><p>Preparing for JEE is not just exam preparation, it is much more than that. It shaped how I think about effort, struggle, and growth.</p>",
+  a6: "<h2>My Books, My Life</h2><p>Books give me a lens, a way to see the world differently and understand perspectives beyond my own.</p>"
 };
 
 function openArticle(id){
