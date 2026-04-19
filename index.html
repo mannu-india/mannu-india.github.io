@@ -124,34 +124,56 @@ section {
 <section id="about">
   <h1 class="title">Mannu</h1>
   <p class="subtitle">Maths • Science • Writing • Thought</p>
+
+  <div class="card">
+
+    <p>
+   Hi! This is Akansha. I like to understand why things are true, why they are the way they are. 
+    </p>
+
+    <br>
+
+    <p>
+ I like maths, it gives me structure. My life is guided by it. Science amazes me and writing helps me bring clarity. 
+    </p>
+
+    <br>
+
+    <p>
+    I am still learning, still exploring, and trying to build a better version — one idea at a time. Thankyou for visiting. I hope you find it meaningful. 
+    </p>
+
+  </div>
 </section>
 
 <!-- CV -->
 <section id="cv">
   <h1>My CV</h1>
-  <div class="card">Add your education, achievements, resume here.</div>
+  <div class="card"> Healing right now. Will update it in future. Still searching and struggling. </div>
 </section>
 
 <!-- MATHS -->
 <section id="maths">
   <h1>Maths Work</h1>
   <div class="grid">
-    <div class="card">ISI Problems</div>
+   
     <div class="card">Proof Writing</div>
-    <div class="card">Notes</div>
+    <div class="card">Notes on Mathematics</div>
   </div>
 </section>
 
 <!-- SCIENCE -->
 <section id="science">
   <h1>Science Collection</h1>
-  <div class="card">Physics, Chemistry, ideas, notes</div>
+  <div class="card">Science History</div>
+  <div class="card">Curiosity Sparks</div>
 </section>
 
 <!-- RESEARCH -->
 <section id="research">
   <h1>Research & Projects</h1>
-  <div class="card">Your research work, experiments, ideas</div>
+  <div class="card">Mother Earth, About Climate Change and it's effect.</div>
+  <div class="card">My Other Research, involes MATHS GRAPHS, DIFFERENT CHEMICALS, MONEY MAKING, BANKING WORKS, ECONOMICS CENSUS. AND MUCH MORE.</div>
 </section>
 
 <!-- WRITING -->
@@ -159,8 +181,13 @@ section {
   <h1>My Writing Space</h1>
 
   <div class="article-list">
-    <div onclick="openArticle('a1')">The Beauty of Silence</div>
-    <div onclick="openArticle('a2')">Why I Love Mathematics</div>
+    <div onclick="openArticle('a1')">The Beauty of Silence, and about my School friends, my school life and 10th Boards. </div>
+    <div onclick="openArticle('a2')">How I fell in Love with Maths</div>
+    <div onclick="openArticle('a3')">My IOQM journey.</div>
+    <div onclick="openArticle('a4')">How dummy school feels like and experience of Board exams class 12</div>
+    <div onclick="openArticle('a5')">WHAT JEE Taught me, and How i see life at the age of 18</div>
+    <div onclick="openArticle('a6')">My Books, my life. How reading helped me.</div>
+  
   </div>
 
   <div id="article" class="article-view">
@@ -171,14 +198,20 @@ section {
 <!-- CHESS -->
 <section id="chess">
   <h1>Chess</h1>
-  <div class="card">Games, puzzles, ratings</div>
+  <div class="card">Chess puzzles</div>
+   <div class="card">Chess Games Review</div>
 </section>
 
 <script>
 /* ARTICLE SYSTEM */
 const articles = {
-  a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers...</p>",
-  a2: "<h2>Why I Love Mathematics</h2><p>Mathematics is not about numbers. It is about patterns...</p>"
+  a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers it makes us realise the importance of onessness.</p>",
+  a2: "<h2>Why I Love Mathematics</h2><p>Mathematics is not about numbers. It is about patterns, the most beautiful way to perceive reality.</p>"
+   a3: "<h2>My IOQM journey</h2><p>It was the day of september 17 when i was in 11 standard, i first encountered the ioqm paper. i first problem went like</p>",
+   a4: "<h2>How dummy school feels like and experience of Board exams class 12</h2><p>Class 12 boards exams not just marks the end of the important era and beginning of the new chapters, for me it was an enriching .</p>",
+   a5: "<h2>WHAT JEE Taught me, and How i see life at the age of 18</h2><p>Preparing for jee doesnt only feels like and exam prep it is so much more that that. thanks to my struggles and boundaries. i dont know why i am more creative on the paper than on my key board</p>",
+   a6: "<h2>My Books, my life. How reading helped me</h2><p>Books give my a lens, an easy way to give me new perspective. </p>",
+  
 };
 
 function openArticle(id){
