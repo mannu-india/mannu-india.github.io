@@ -209,6 +209,65 @@ I am still learning, still exploring, and trying to build a better version — o
   <div class="card">Chess puzzles</div>
   <div class="card">Chess games review</div>
 </section>
+  export default function ChessSection() {
+  const cards = [
+    {
+      title: 'Puzzle of the Day',
+      subtitle: 'Solve tactical ideas: forks, pins, and mating nets',
+      badge: 'Daily',
+    },
+    {
+      title: 'Game Review',
+      subtitle: 'Move-by-move analysis of classic and personal games',
+      badge: 'Weekly',
+    },
+    {
+      title: 'Opening Ideas',
+      subtitle: 'Key plans, traps, and model games by opening',
+      badge: 'Learn',
+    },
+    {
+      title: 'Endgame Lessons',
+      subtitle: 'Essential king-pawn and rook endgame techniques',
+      badge: 'Pro',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white p-8 md:p-12">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-5xl font-light mb-10 tracking-tight">Chess</h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 shadow-2xl hover:scale-[1.02] transition-all duration-300 hover:border-cyan-400/50"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-medium">{card.title}</h2>
+                <span className="text-xs px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300 border border-cyan-400/20">
+                  {card.badge}
+                </span>
+              </div>
+              <p className="text-gray-300 text-base leading-7">{card.subtitle}</p>
+              <button className="mt-6 px-5 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition">
+                Explore →
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-3xl border border-cyan-400/20 bg-white/5 p-8">
+          <h3 className="text-2xl mb-3">Featured This Week</h3>
+          <p className="text-gray-300">
+            Puzzle: White to move and mate in 3 • Review: Tal’s brilliant queen sacrifice • Opening: Sicilian Dragon attack plan
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 <script>
 const articles = {
