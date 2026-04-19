@@ -1,66 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mannu India</title>
+<meta charset="UTF-8">
+<title>Mannu India</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #0d0d0d;
-      color: #eee;
-      scroll-behavior: smooth;
-    }
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
-    nav {
-      position: fixed;
-      width: 100%;
-      background: rgba(0,0,0,0.8);
-      padding: 12px;
-      text-align: center;
-    }
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
 
-    nav a {
-      margin: 10px;
-      color: #aaa;
-      text-decoration: none;
-      font-size: 14px;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #0f2027, #050505);
+  color: #eaeaea;
+  scroll-behavior: smooth;
+}
 
-    nav a:hover {
-      color: #00ffd5;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 12px;
+  z-index: 1000;
+}
 
-    section {
-      height: 100vh;
-      padding: 80px 20px;
-    }
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+  transition: 0.3s;
+}
 
-    h1 {
-      color: #00ffd5;
-    }
-  </style>
+nav a:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 10px #00ffd5;
+}
+
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  padding: 100px 10%;
+}
+
+/* HERO */
+#about {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  background: linear-gradient(90deg,#00ffd5,#9f7aea);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 15px;
+  color: #aaa;
+}
+
+/* CARD STYLE */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0,255,213,0.2);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+
+/* WRITING SYSTEM */
+.article-list div {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.article-list div:hover {
+  color: #00ffd5;
+}
+
+.article-view {
+  margin-top: 30px;
+  padding: 20px;
+  background: #111;
+  border-radius: 10px;
+  line-height: 1.7;
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#cv">CV</a>
-  <a href="#maths">Maths</a>
-  <a href="#science">Science</a>
-  <a href="#research">Research</a>
-  <a href="#writing">Poems</a>
-  <a href="#chess">Chess</a>
+<a href="#about">About</a>
+<a href="#cv">CV</a>
+<a href="#maths">Maths</a>
+<a href="#science">Science</a>
+<a href="#research">Research</a>
+<a href="#writing">Writing</a>
+<a href="#chess">Chess</a>
 </nav>
 
-<section id="about"><h1>About Me</h1></section>
-<section id="cv"><h1>My CV</h1></section>
-<section id="maths"><h1>Maths Work</h1></section>
-<section id="science"><h1>Science Collection</h1></section>
-<section id="research"><h1>Research & Projects</h1></section>
-<section id="writing"><h1>Poems & Stories</h1></section>
-<section id="chess"><h1>Chess</h1></section>
+<!-- ABOUT -->
+<section id="about">
+  <h1 class="title">Mannu</h1>
+  <p class="subtitle">Maths • Science • Writing • Thought</p>
+</section>
+
+<!-- CV -->
+<section id="cv">
+  <h1>My CV</h1>
+  <div class="card">Add your education, achievements, resume here.</div>
+</section>
+
+<!-- MATHS -->
+<section id="maths">
+  <h1>Maths Work</h1>
+  <div class="grid">
+    <div class="card">ISI Problems</div>
+    <div class="card">Proof Writing</div>
+    <div class="card">Notes</div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section id="science">
+  <h1>Science Collection</h1>
+  <div class="card">Physics, Chemistry, ideas, notes</div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <h1>Research & Projects</h1>
+  <div class="card">Your research work, experiments, ideas</div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <h1>My Writing Space</h1>
+
+  <div class="article-list">
+    <div onclick="openArticle('a1')">The Beauty of Silence</div>
+    <div onclick="openArticle('a2')">Why I Love Mathematics</div>
+  </div>
+
+  <div id="article" class="article-view">
+    Select an article to read...
+  </div>
+</section>
+
+<!-- CHESS -->
+<section id="chess">
+  <h1>Chess</h1>
+  <div class="card">Games, puzzles, ratings</div>
+</section>
+
+<script>
+/* ARTICLE SYSTEM */
+const articles = {
+  a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers...</p>",
+  a2: "<h2>Why I Love Mathematics</h2><p>Mathematics is not about numbers. It is about patterns...</p>"
+};
+
+function openArticle(id){
+  document.getElementById("article").innerHTML = articles[id];
+}
+</script>
 
 </body>
 </html>
