@@ -203,13 +203,7 @@ I am still learning, still exploring, and trying to build a better version — o
   </div>
 </section>
 
-<!-- CHESS -->
-<section id="chess">
-  <h1>Chess</h1>
-  <div class="card">Chess puzzles</div>
-  <div class="card">Chess games review</div>
-</section>
-  export default function ChessSection() {
+export default function ChessSection() {
   const cards = [
     {
       title: 'Puzzle of the Day',
@@ -234,14 +228,14 @@ I am still learning, still exploring, and trying to build a better version — o
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white p-8 md:p-12">
+    <section id="chess" className="min-h-screen bg-black text-white p-8 md:p-12">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-light mb-10 tracking-tight">Chess</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {cards.map((card, idx) => (
+          {cards.map((card) => (
             <div
-              key={idx}
+              key={card.title}
               className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 shadow-2xl hover:scale-[1.02] transition-all duration-300 hover:border-cyan-400/50"
             >
               <div className="flex items-center justify-between mb-4">
@@ -250,7 +244,11 @@ I am still learning, still exploring, and trying to build a better version — o
                   {card.badge}
                 </span>
               </div>
-              <p className="text-gray-300 text-base leading-7">{card.subtitle}</p>
+
+              <p className="text-gray-300 text-base leading-7">
+                {card.subtitle}
+              </p>
+
               <button className="mt-6 px-5 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition">
                 Explore →
               </button>
@@ -265,10 +263,9 @@ I am still learning, still exploring, and trying to build a better version — o
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
 <script>
 const articles = {
   a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers, it makes us realise the importance of oneness.</p>",
