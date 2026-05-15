@@ -2,226 +2,466 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mannu India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BECOMING ZERO</title>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family: 'Manrope', sans-serif;
-  background: radial-gradient(circle at top, #0f2027, #050505);
-  color: #eaeaea;
-  scroll-behavior: smooth;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Manrope',sans-serif;
+  background:
+  radial-gradient(circle at top,#11212d,#050505 70%);
+  color:#f2f2f2;
+  overflow-x:hidden;
 }
 
 /* NAVBAR */
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  backdrop-filter: blur(12px);
-  background: rgba(0,0,0,0.5);
-  text-align: center;
-  padding: 12px;
-  z-index: 1000;
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+
+  padding:16px 10px;
+
+  backdrop-filter:blur(14px);
+  background:rgba(0,0,0,0.45);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #bbb;
-  font-size: 14px;
-  transition: 0.3s;
+nav a{
+  color:#bfbfbf;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s ease;
+  padding:6px 10px;
+  border-radius:8px;
 }
 
-nav a:hover {
-  color: #00ffd5;
-  text-shadow: 0 0 10px #00ffd5;
+nav a:hover{
+  color:#00ffd5;
+  background:rgba(255,255,255,0.05);
 }
 
 /* SECTIONS */
-section {
-  min-height: 100vh;
-  padding: 100px 10%;
+
+section{
+  min-height:100vh;
+  padding:120px 10% 60px;
 }
 
-h1 {
-  margin-bottom: 10px;
-  font-weight: 500;
+h1{
+  font-size:38px;
+  margin-bottom:20px;
+  font-weight:700;
 }
 
-p {
-  line-height: 1.8;
-  color: #ccc;
+p{
+  color:#cfcfcf;
+  line-height:1.8;
 }
 
 /* HERO */
-#about {
-  text-align: center;
+
+#about{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-.title {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  background: linear-gradient(90deg,#00ffd5,#9f7aea);
-  -webkit-background-clip: text;
-  color: transparent;
+.title{
+  font-family:'Playfair Display',serif;
+  font-size:68px;
+
+  background:linear-gradient(
+  90deg,
+  #00ffd5,
+  #9f7aea
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-.subtitle {
-  margin-top: 10px;
-  color: #aaa;
+.subtitle{
+  margin-top:12px;
+  color:#aaaaaa;
+  font-size:18px;
 }
 
 /* CARD */
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 15px;
-  margin-top: 25px;
-  transition: 0.3s;
+
+.card{
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  padding:28px;
+  border-radius:18px;
+
+  margin-top:24px;
+
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease,
+  border 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(0,255,213,0.2);
+.card:hover{
+  transform:translateY(-6px);
+
+  border:1px solid rgba(0,255,213,0.2);
+
+  box-shadow:
+  0 10px 35px rgba(0,255,213,0.08);
 }
 
 /* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
+
+.grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:22px;
 }
 
-/* WRITING */
-.article-list div {
-  cursor: pointer;
-  padding: 12px;
-  border-bottom: 1px solid #333;
+/* ARTICLE LIST */
+
+.article-list{
+  margin-top:20px;
 }
 
-.article-list div:hover {
-  color: #00ffd5;
+.article-list div{
+  padding:16px;
+  border-bottom:1px solid #222;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
 }
 
-.article-view {
-  margin-top: 30px;
-  padding: 25px;
-  background: #111;
-  border-radius: 12px;
-  line-height: 1.8;
+.article-list div:hover{
+  color:#00ffd5;
+  padding-left:10px;
 }
+
+/* ARTICLE VIEW */
+
+.article-view{
+  margin-top:30px;
+
+  padding:30px;
+
+  background:rgba(255,255,255,0.04);
+
+  border-radius:16px;
+
+  line-height:1.9;
+
+  animation:fade 0.4s ease;
+}
+
+.article-view h2{
+  margin-bottom:15px;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  section{
+    padding:120px 7% 60px;
+  }
+
+  .title{
+    font-size:48px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+
+  nav{
+    gap:4px;
+  }
+
+  nav a{
+    font-size:13px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#about">About</a>
-<a href="#cv">CV</a>
-<a href="#maths">Maths</a>
-<a href="#science">Science</a>
-<a href="#research">Research</a>
-<a href="#writing">Writing</a>
+<!-- NAVBAR -->
 
+<nav>
+  <a href="#about">About</a>
+  <a href="#cv">CV</a>
+  <a href="#maths">Maths</a>
+  <a href="#science">Science</a>
+  <a href="#research">Research</a>
+  <a href="#writing">Writing</a>
 </nav>
 
 <!-- ABOUT -->
+
 <section id="about">
+
   <h1 class="title">Mannu</h1>
-  <p class="subtitle">Maths • Science • Writing • Thought</p>
+
+  <p class="subtitle">
+    Maths • Science • Writing • Thought
+  </p>
 
   <div class="card">
+
     <p>
-Hi! This is Akansha. 
+      Hi! This is Akansha.
     </p>
 
     <br>
 
     <p>
-I do what I do. Full of mistakes, learnings, patience and failures. 
+      I do what I do. Full of mistakes,
+      learnings, patience and failures.
     </p>
 
     <br>
 
     <p>
-      Thank You for visiting.
+      Thank you for visiting.
     </p>
+
   </div>
+
 </section>
 
 <!-- CV -->
+
 <section id="cv">
+
   <h1>My CV</h1>
+
   <div class="card">
-    Currently in a phase of learning and growth. This section will be updated soon.
+    Currently in a phase of learning and growth.
+    This section will be updated soon.
   </div>
+
 </section>
 
 <!-- MATHS -->
+
 <section id="maths">
+
   <h1>Maths Work</h1>
+
   <div class="grid">
-    <div class="card">Proof Writing</div>
-    <div class="card">Notes on Mathematics</div>
+
+    <div class="card">
+      Proof Writing
+    </div>
+
+    <div class="card">
+      Notes on Mathematics
+    </div>
+
   </div>
+
 </section>
 
 <!-- SCIENCE -->
+
 <section id="science">
+
   <h1>Science Collection</h1>
-  <div class="card">Science History</div>
-  <div class="card">Curiosity Sparks</div>
+
+  <div class="grid">
+
+    <div class="card">
+      Science History
+    </div>
+
+    <div class="card">
+      Curiosity Sparks
+    </div>
+
+  </div>
+
 </section>
 
 <!-- RESEARCH -->
+
 <section id="research">
+
   <h1>Research & Projects</h1>
-  <div class="card">Mother Earth, About Climate Change and its effect.</div>
-  <div class="card">My other research involves maths graphs, different chemicals, economics, and more.</div>
+
+  <div class="card">
+    Mother Earth, About Climate Change and its effect.
+  </div>
+
+  <div class="card">
+    My other research involves maths graphs,
+    different chemicals, economics, and more.
+  </div>
+
 </section>
 
 <!-- WRITING -->
+
 <section id="writing">
+
   <h1>My Writing Space</h1>
 
   <div class="article-list">
-    <div onclick="openArticle('a1')">The Beauty of Silence</div>
-    <div onclick="openArticle('a2')">How I fell in Love with Maths</div>
-    <div onclick="openArticle('a3')">My IOQM journey</div>
-    <div onclick="openArticle('a4')">Dummy school & board exams (Class 12)</div>
-    <div onclick="openArticle('a5')">What JEE taught me</div>
-    <div onclick="openArticle('a6')">My Books, My Life</div>
+
+    <div onclick="openArticle('a1')">
+      The Beauty of Silence
+    </div>
+
+    <div onclick="openArticle('a2')">
+      How I fell in Love with Maths
+    </div>
+
+    <div onclick="openArticle('a3')">
+      My IOQM journey
+    </div>
+
+    <div onclick="openArticle('a4')">
+      Dummy school & board exams
+    </div>
+
+    <div onclick="openArticle('a5')">
+      What JEE taught me
+    </div>
+
+    <div onclick="openArticle('a6')">
+      My Books, My Life
+    </div>
+
   </div>
 
   <div id="article" class="article-view">
     Select an article to read...
   </div>
+
 </section>
 
+<!-- SCRIPT -->
 
-        
+<script>
+
 const articles = {
-  a1: "<h2>The Beauty of Silence</h2><p>Silence is not empty. It is full of answers, it makes us realise the importance of oneness.</p>",
 
-  a2: "<h2>How I fell in Love with Maths</h2><p>Mathematics is not about numbers. It is about patterns, the most beautiful way to perceive reality.</p>",
+a1: `
+<h2>The Beauty of Silence</h2>
+<p>
+Silence is not empty.
+It is full of answers,
+it makes us realise
+the importance of oneness.
+</p>
+`,
 
-  a3: "<h2>My IOQM journey</h2><p>It was the day of September 17 when I was in class 11 that I first encountered the IOQM paper.</p>",
+a2: `
+<h2>How I fell in Love with Maths</h2>
+<p>
+Mathematics is not about numbers.
+It is about patterns,
+the most beautiful way
+to perceive reality.
+</p>
+`,
 
-  a4: "<h2>Dummy school & board exams</h2><p>Class 12 board exams do not just mark the end of an era, but the beginning of something new.</p>",
+a3: `
+<h2>My IOQM journey</h2>
+<p>
+It was the day of September 17
+when I was in class 11
+that I first encountered the IOQM paper.
+</p>
+`,
 
-  a5: "<h2>What JEE taught me</h2><p>Preparing for JEE is not just exam preparation, it is much more than that.</p>",
+a4: `
+<h2>Dummy school & board exams</h2>
+<p>
+Class 12 board exams do not just
+mark the end of an era,
+but the beginning of something new.
+</p>
+`,
 
-  a6: "<h2>My Books, My Life</h2><p>Books give me a lens, a way to see the world differently.</p>"
+a5: `
+<h2>What JEE taught me</h2>
+<p>
+Preparing for JEE is not just exam preparation.
+It changes patience, mindset and discipline.
+</p>
+`,
+
+a6: `
+<h2>My Books, My Life</h2>
+<p>
+Books give me a lens,
+a way to see the world differently.
+</p>
+`
+
 };
 
 function openArticle(id){
-  document.getElementById("article").innerHTML = articles[id];
+
+  const article =
+  document.getElementById("article");
+
+  article.innerHTML = articles[id];
+
+  article.style.animation = "none";
+
+  setTimeout(()=>{
+    article.style.animation = "fade 0.4s ease";
+  },10);
 }
+
 </script>
 
 </body>
