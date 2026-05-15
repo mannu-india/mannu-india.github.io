@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BECOMING ZERO</title>
 
-<!-- Fonts -->
+<!-- FONTS -->
+
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
   margin:0;
@@ -22,19 +27,25 @@ html{
 }
 
 body{
+
   font-family:'Manrope',sans-serif;
+
   background:
   radial-gradient(circle at top,#11212d,#050505 70%);
+
   color:#f2f2f2;
+
   overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 nav{
+
   position:fixed;
   top:0;
   width:100%;
+
   z-index:1000;
 
   display:flex;
@@ -45,81 +56,114 @@ nav{
   padding:16px 10px;
 
   backdrop-filter:blur(14px);
-  background:rgba(0,0,0,0.45);
 
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  background:
+  rgba(0,0,0,0.45);
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.05);
 }
 
 nav a{
+
   color:#bfbfbf;
+
   text-decoration:none;
+
   font-size:14px;
-  transition:0.3s ease;
+
   padding:6px 10px;
+
   border-radius:8px;
+
+  transition:0.3s ease;
 }
 
 nav a:hover{
+
   color:#00ffd5;
-  background:rgba(255,255,255,0.05);
+
+  background:
+  rgba(255,255,255,0.05);
 }
 
 /* SECTIONS */
 
 section{
+
   min-height:100vh;
+
   padding:120px 10% 60px;
 }
 
 h1{
+
   font-size:38px;
+
   margin-bottom:20px;
+
   font-weight:700;
 }
 
 p{
+
   color:#cfcfcf;
-  line-height:1.8;
+
+  line-height:1.9;
 }
 
 /* HERO */
 
 #about{
+
   display:flex;
   flex-direction:column;
+
   justify-content:center;
   align-items:center;
+
   text-align:center;
 }
 
 .title{
+
   font-family:'Playfair Display',serif;
+
   font-size:68px;
 
-  background:linear-gradient(
+  background:
+  linear-gradient(
   90deg,
   #00ffd5,
   #9f7aea
   );
 
   -webkit-background-clip:text;
+
   color:transparent;
 }
 
 .subtitle{
+
   margin-top:12px;
+
   color:#aaaaaa;
+
   font-size:18px;
 }
 
 /* CARD */
 
 .card{
-  background:rgba(255,255,255,0.05);
 
-  border:1px solid rgba(255,255,255,0.05);
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.05);
 
   padding:28px;
+
   border-radius:18px;
 
   margin-top:24px;
@@ -131,17 +175,32 @@ p{
 }
 
 .card:hover{
+
   transform:translateY(-6px);
 
-  border:1px solid rgba(0,255,213,0.2);
+  border:
+  1px solid rgba(0,255,213,0.2);
 
   box-shadow:
   0 10px 35px rgba(0,255,213,0.08);
 }
 
+/* LIMIT WIDTH */
+
+#about .card,
+#writing .article-view,
+.contact-card{
+
+  max-width:850px;
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
 /* GRID */
 
 .grid{
+
   display:grid;
 
   grid-template-columns:
@@ -153,12 +212,16 @@ p{
 /* ARTICLE LIST */
 
 .article-list{
+
   margin-top:20px;
 }
 
 .article-list div{
+
   padding:16px;
-  border-bottom:1px solid #222;
+
+  border-bottom:
+  1px solid #222;
 
   cursor:pointer;
 
@@ -166,18 +229,24 @@ p{
 }
 
 .article-list div:hover{
+
   color:#00ffd5;
+
   padding-left:10px;
 }
 
 /* ARTICLE VIEW */
 
 .article-view{
+
   margin-top:30px;
 
   padding:30px;
 
-  background:rgba(255,255,255,0.04);
+  min-height:220px;
+
+  background:
+  rgba(255,255,255,0.04);
 
   border-radius:16px;
 
@@ -187,17 +256,97 @@ p{
 }
 
 .article-view h2{
+
   margin-bottom:15px;
 }
 
+.article-view p{
+
+  margin-bottom:18px;
+}
+
+/* CONTACT */
+
+.contact-card{
+
+  text-align:center;
+}
+
+.contact-note{
+
+  margin-bottom:25px;
+
+  color:#bdbdbd;
+
+  font-style:italic;
+}
+
+.contact-links{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+}
+
+.contact-link{
+
+  text-decoration:none;
+
+  color:#00ffd5;
+
+  border:
+  1px solid rgba(0,255,213,0.2);
+
+  padding:12px 22px;
+
+  border-radius:12px;
+
+  transition:0.3s ease;
+}
+
+.contact-link:hover{
+
+  background:
+  rgba(0,255,213,0.08);
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 8px 25px rgba(0,255,213,0.08);
+}
+
+/* FOOTER */
+
+footer{
+
+  text-align:center;
+
+  padding:40px 20px;
+
+  color:#666;
+
+  font-size:14px;
+}
+
+/* ANIMATION */
+
 @keyframes fade{
+
   from{
+
     opacity:0;
+
     transform:translateY(10px);
   }
 
   to{
+
     opacity:1;
+
     transform:translateY(0);
   }
 }
@@ -207,27 +356,33 @@ p{
 @media(max-width:768px){
 
   section{
+
     padding:120px 7% 60px;
   }
 
   .title{
+
     font-size:48px;
   }
 
   h1{
+
     font-size:30px;
   }
 
   nav{
+
     gap:4px;
   }
 
   nav a{
+
     font-size:13px;
   }
 }
 
 </style>
+
 </head>
 
 <body>
@@ -235,19 +390,30 @@ p{
 <!-- NAVBAR -->
 
 <nav>
+
   <a href="#about">About</a>
+
   <a href="#cv">CV</a>
+
   <a href="#maths">Maths</a>
+
   <a href="#science">Science</a>
+
   <a href="#research">Research</a>
+
   <a href="#writing">Writing</a>
+
+  <a href="#contact">Contact</a>
+
 </nav>
 
 <!-- ABOUT -->
 
 <section id="about">
 
-  <h1 class="title">Becoming Zero</h1>
+  <h1 class="title">
+    Becoming Zero
+  </h1>
 
   <p class="subtitle">
     Maths • Science • Writing • Thought
@@ -262,8 +428,10 @@ p{
     <br>
 
     <p>
-      I do what I do. My mistakes makes me clean. 
-      I learn from them. Self-reflection Page.
+      I do what I do.
+      My mistakes teach me to become lighter.
+      I learn from them.
+      This is a self-reflection page.
     </p>
 
     <br>
@@ -283,8 +451,9 @@ p{
   <h1>My CV</h1>
 
   <div class="card">
-    
+
     This section will be updated soon.
+
   </div>
 
 </section>
@@ -336,11 +505,16 @@ p{
   <h1>Research & Projects</h1>
 
   <div class="card">
-    Mother Earth, About Climate Change and its effect.
+    Mother Earth,
+    climate change,
+    and its effects.
   </div>
 
   <div class="card">
-    My other research involves ....
+    My other research involves mathematics,
+    chemicals,
+    economics,
+    and more.
   </div>
 
 </section>
@@ -354,39 +528,122 @@ p{
   <div class="article-list">
 
     <div onclick="openArticle('a1')">
-      Beauty of Silence. 
-    </div>
 
-  
- 
+      Beauty of Silence
+
+    </div>
 
   </div>
 
   <div id="article" class="article-view">
+
     Select an article to read...
+
   </div>
 
 </section>
 
-<!-- SCRIPT -->
+<!-- CONTACT -->
 
+<section id="contact">
+
+  <h1>Contact</h1>
+
+  <div class="card contact-card">
+
+    <p class="contact-note">
+
+      You can email me if you want to reach out,
+      though I do not know why you would.
+
+    </p>
+
+    <div class="contact-links">
+
+      <a
+        href="mailto:papakimannu@gmail.com"
+        class="contact-link"
+      >
+
+        Gmail
+
+      </a>
+
+      <a
+        href="https://github.com/mannu-india"
+        target="_blank"
+        class="contact-link"
+      >
+
+        GitHub
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  Becoming Zero © 2026
+
+</footer>
+
+<!-- SCRIPT -->
 
 <script>
 
 const articles = {
 
 a1: `
-<h2>Beauty of Silence</h2>
-<p>
-Speech is of the society, words are of the mind, sounds are of nature, the soundless is of the beyond.
-Thus, if one gets identified with one’s own speech, he will belong to the society. If he gets identified with his words, he will belong to the mind. 
-If he gets identified with the sounds, he will belong to nature. If one dissolves in the soundless silence, to him alone the realms of the beyond will yield. Sadhguru states this. 
-But obviously like most people i was and maybe still am a very nice talker, i can speak all sorts of rubbish but i dont now. life for me is to stay quiet.you know what my writing is still the same, lame , poor, but
-what is not same is my confidence. i am not afraid of silence, it gave me everything. the power to speak, courage to stand and fight. built my intuition. gave me some of the most honest answers to life.
 
-The way education system, money, degrees, and nonsense social media brainwashes millions of people. they get trapped into the reality that everything they see is real. stopping blurrring the mind to actually think
-to choose, some stressed some dead. choose silence, choose peace. but i dont know anything. i am still 18 and growing. 
+<h2>Beauty of Silence</h2>
+
+<p>
+Speech is of society,
+words are of the mind,
+sounds are of nature,
+and the soundless belongs to the beyond.
 </p>
+
+<p>
+Sadhguru says this.
+</p>
+
+<p>
+I used to speak endlessly.
+Maybe I still do sometimes.
+But silence changed me.
+</p>
+
+<p>
+It gave me courage,
+intuition,
+and honest answers.
+</p>
+
+<p>
+The world constantly distracts people —
+education pressure,
+money,
+social media,
+noise everywhere.
+</p>
+
+<p>
+Maybe silence is resistance.
+Maybe peace is intelligence.
+</p>
+
+<p>
+But I do not know much yet.
+I am still 18 and growing.
+</p>
+
 `
 
 };
@@ -396,13 +653,22 @@ function openArticle(id){
   const article =
   document.getElementById("article");
 
-  article.innerHTML = articles[id];
+  article.innerHTML =
+  articles[id];
 
-  article.style.animation = "none";
+  article.style.animation =
+  "none";
 
   setTimeout(()=>{
-    article.style.animation = "fade 0.4s ease";
+
+    article.style.animation =
+    "fade 0.4s ease";
+
   },10);
 }
 
 </script>
+
+</body>
+
+</html>
