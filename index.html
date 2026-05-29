@@ -6,9 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>mannu-india</title>
-
-<!-- FONTS -->
+<title>Becoming Zero</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
@@ -43,17 +41,18 @@ body{
 nav{
 
   position:fixed;
+
   top:0;
+
   width:100%;
 
-  z-index:1000;
-
   display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
 
-  padding:16px 10px;
+  justify-content:center;
+
+  gap:25px;
+
+  padding:18px;
 
   backdrop-filter:blur(14px);
 
@@ -70,66 +69,38 @@ nav a{
 
   text-decoration:none;
 
-  font-size:14px;
-
-  padding:6px 10px;
-
-  border-radius:8px;
-
   transition:0.3s ease;
 }
 
 nav a:hover{
 
   color:#00ffd5;
-
-  background:
-  rgba(255,255,255,0.05);
 }
 
-/* SECTIONS */
+/* HOME */
 
 section{
 
   min-height:100vh;
 
-  padding:120px 10% 60px;
-}
-
-h1{
-
-  font-size:38px;
-
-  margin-bottom:20px;
-
-  font-weight:700;
-}
-
-p{
-
-  color:#cfcfcf;
-
-  line-height:1.9;
-}
-
-/* HERO */
-
-#about{
-
   display:flex;
+
   flex-direction:column;
 
   justify-content:center;
+
   align-items:center;
 
   text-align:center;
+
+  padding:120px 20px;
 }
 
 .title{
 
   font-family:'Playfair Display',serif;
 
-  font-size:68px;
+  font-size:72px;
 
   background:
   linear-gradient(
@@ -145,16 +116,39 @@ p{
 
 .subtitle{
 
-  margin-top:12px;
+  margin-top:15px;
 
   color:#aaaaaa;
 
   font-size:18px;
 }
 
+/* PHOTO */
+
+.profile{
+
+  width:320px;
+
+  max-width:90%;
+
+  border-radius:20px;
+
+  margin-top:40px;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.25);
+}
+
 /* CARD */
 
 .card{
+
+  margin-top:35px;
+
+  max-width:800px;
 
   background:
   rgba(255,255,255,0.05);
@@ -162,222 +156,24 @@ p{
   border:
   1px solid rgba(255,255,255,0.05);
 
-  padding:28px;
+  padding:30px;
 
   border-radius:18px;
 
-  margin-top:24px;
-
-  transition:
-  transform 0.3s ease,
-  box-shadow 0.3s ease,
-  border 0.3s ease;
-}
-
-.card:hover{
-
-  transform:translateY(-6px);
-
-  border:
-  1px solid rgba(0,255,213,0.2);
-
-  box-shadow:
-  0 10px 35px rgba(0,255,213,0.08);
-}
-
-/* LIMIT WIDTH */
-
-#about .card,
-#writing .article-view,
-.contact-card{
-
-  max-width:850px;
-
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* GRID */
-
-.grid{
-
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(250px,1fr));
-
-  gap:22px;
-}
-
-/* ARTICLE LIST */
-
-.article-list{
-
-  margin-top:20px;
-}
-
-.article-list div{
-
-  padding:16px;
-
-  border-bottom:
-  1px solid #222;
-
-  cursor:pointer;
-
-  transition:0.3s ease;
-}
-
-.article-list div:hover{
-
-  color:#00ffd5;
-
-  padding-left:10px;
-}
-
-/* ARTICLE VIEW */
-
-.article-view{
-
-  margin-top:30px;
-
-  padding:30px;
-
-  min-height:220px;
-
-  background:
-  rgba(255,255,255,0.04);
-
-  border-radius:16px;
-
   line-height:1.9;
-
-  animation:fade 0.4s ease;
 }
-
-.article-view h2{
-
-  margin-bottom:15px;
-}
-
-.article-view p{
-
-  margin-bottom:18px;
-}
-
-/* CONTACT */
-
-.contact-card{
-
-  text-align:center;
-}
-
-.contact-note{
-
-  margin-bottom:25px;
-
-  color:#bdbdbd;
-
-  font-style:italic;
-}
-
-.contact-links{
-
-  display:flex;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-
-  gap:18px;
-}
-
-.contact-link{
-
-  text-decoration:none;
-
-  color:#00ffd5;
-
-  border:
-  1px solid rgba(0,255,213,0.2);
-
-  padding:12px 22px;
-
-  border-radius:12px;
-
-  transition:0.3s ease;
-}
-
-.contact-link:hover{
-
-  background:
-  rgba(0,255,213,0.08);
-
-  transform:translateY(-3px);
-
-  box-shadow:
-  0 8px 25px rgba(0,255,213,0.08);
-}
-
-/* FOOTER */
-
-footer{
-
-  text-align:center;
-
-  padding:40px 20px;
-
-  color:#666;
-
-  font-size:14px;
-}
-
-/* ANIMATION */
-
-@keyframes fade{
-
-  from{
-
-    opacity:0;
-
-    transform:translateY(10px);
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:translateY(0);
-  }
-}
-
-/* MOBILE */
 
 @media(max-width:768px){
-
-  section{
-
-    padding:120px 7% 60px;
-  }
 
   .title{
 
     font-size:48px;
   }
 
-  h1{
+  .profile{
 
-    font-size:30px;
-  }
-
-  nav{
-
-    gap:4px;
-  }
-
-  nav a{
-
-    font-size:13px;
+    width:170px;
+    height:170px;
   }
 }
 
@@ -387,29 +183,19 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
-  <a href="#about">About</a>
+  <a href="#">Home</a>
 
-  <a href="#cv">CV</a>
+  <a href="#">Writing</a>
 
-  <a href="#maths">Maths</a>
+  <a href="#">Research</a>
 
-  <a href="#science">Science</a>
-
-  <a href="#research">Research</a>
-
-  <a href="#writing">Writing</a>
-
-  <a href="#contact">Contact</a>
+  <a href="#">Contact</a>
 
 </nav>
 
-<!-- ABOUT -->
-
-<section id="about">
+<section>
 
   <h1 class="title">
     Becoming Zero
@@ -418,6 +204,12 @@ footer{
   <p class="subtitle">
     Maths • Science • Writing • Thought
   </p>
+
+  <img
+    src="profile.jpg"
+    alt="Profile Picture"
+    class="profile"
+  >
 
   <div class="card">
 
@@ -428,237 +220,19 @@ footer{
     <br>
 
     <p>
-     Student. Our mistakes makes us cleaner. 
+      Student.
     </p>
 
     <br>
 
     <p>
-      Thank you for visiting.
+      Learning through maths, science,
+      writing and curiosity.
     </p>
 
   </div>
 
 </section>
-
-<!-- CV -->
-
-<section id="cv">
-
-  <h1>My CV</h1>
-
-  <div class="card">
-
-    This section will be updated soon.
-
-  </div>
-
-</section>
-
-<!-- MATHS -->
-
-<section id="maths">
-
-  <h1>Maths Work</h1>
-
-  <div class="grid">
-
-    <div class="card">
-      Proof Writing
-    </div>
-
-    <div class="card">
-      Notes on Mathematics
-    </div>
-
-  </div>
-
-</section>
-
-<!-- SCIENCE -->
-
-<section id="science">
-
-  <h1>Science Collection</h1>
-
-  <div class="grid">
-
-    <div class="card">
-      Science History
-    </div>
-
-    <div class="card">
-      Curiosity Sparks
-    </div>
-
-  </div>
-
-</section>
-
-<!-- RESEARCH -->
-
-<section id="research">
-
-  <h1>Research & Projects</h1>
-
-  <div class="card">
-    Earth
-  </div>
-
-  <div class="card">
-    My other research involves....
-  </div>
-
-</section>
-
-<!-- WRITING -->
-
-<section id="writing">
-
-  <h1>My Writing Space</h1>
-
-  <div class="article-list">
-
-    <div onclick="openArticle('a1')">
-
-      Beauty of Silence
-
-    </div>
-
-  </div>
-
-  <div id="article" class="article-view">
-
-    Select an article to read...
-
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-  <h1>Contact</h1>
-
-  <div class="card contact-card">
-
-    <p class="contact-note">
-
-      You can email me if you want to but I don't know why you would though.
-
-    </p>
-
-    <div class="contact-links">
-
-      <a
-        href="mailto:papakimannu@gmail.com"
-        class="contact-link"
-      >
-
-        Gmail
-
-      </a>
-
-      <a
-        href="https://github.com/mannu-india"
-        target="_blank"
-        class="contact-link"
-      >
-
-        GitHub
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  Becoming Zero © 2026
-
-</footer>
-
-<!-- SCRIPT -->
-
-<script>
-
-const articles = {
-
-a1: `
-
-<h2>Beauty of Silence</h2>
-
-<p>
-Speech is of society,
-words are of the mind,
-sounds are of nature,
-and the soundless belongs to the beyond.
-</p>
-
-<p>
-Sadhguru says this.
-</p>
-
-<p>
-I used to speak endlessly.
-Maybe I still do sometimes.
-But silence changed me.
-</p>
-
-<p>
-It gave me courage,
-intuition,
-and honest answers.
-</p>
-
-<p>
-The world constantly distracts people —
-education pressure,
-money,
-social media,
-noise everywhere.
-</p>
-
-<p>
-Maybe silence is resistance.
-Maybe peace is intelligence.
-</p>
-
-<p>
-But I do not know much yet.
-I am still 18 and growing.
-</p>
-
-`
-
-};
-
-function openArticle(id){
-
-  const article =
-  document.getElementById("article");
-
-  article.innerHTML =
-  articles[id];
-
-  article.style.animation =
-  "none";
-
-  setTimeout(()=>{
-
-    article.style.animation =
-    "fade 0.4s ease";
-
-  },10);
-}
-
-</script>
 
 </body>
 
